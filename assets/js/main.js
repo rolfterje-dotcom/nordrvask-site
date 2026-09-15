@@ -47,7 +47,7 @@
   if (!form) return;
 
   var KEY = form.dataset.key || '';
-  var MOTTAKER = 's-ruw@hotmail.com';
+  var MOTTAKER = 's-ruw@hotmail.no';
   form.elements.access_key.value = KEY;
   if (!KEY) {
     document.getElementById('send-hint').textContent = 'E-postprogrammet ditt åpnes med meldingen ferdig utfylt.';
