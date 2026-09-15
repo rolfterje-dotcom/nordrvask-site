@@ -47,7 +47,7 @@
   if (!form) return;
 
   var KEY = form.dataset.key || '';
-  var MOTTAKER = 'post@nordrvask.no';
+  var MOTTAKER = 's-ruw@hotmail.com';
   form.elements.access_key.value = KEY;
   if (!KEY) {
     document.getElementById('send-hint').textContent = 'E-postprogrammet ditt åpnes med meldingen ferdig utfylt.';
