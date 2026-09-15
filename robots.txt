@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /takk.html
 Sitemap: https://nordrvask.no/sitemap.xml

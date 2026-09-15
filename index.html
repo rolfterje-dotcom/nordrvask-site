@@ -14,7 +14,7 @@
   <meta property="og:locale" content="nb_NO">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cinzel:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Cinzel:wght@600;700&display=swap">
   <link rel="preload" as="image" href="assets/img/hero-ocean.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
@@ -23,7 +23,7 @@
     "@type": "LocalBusiness",
     "name": "NordR Vask",
     "url": "https://nordrvask.no/",
-    "email": "s-ruw@hotmail.no",
+    "email": "kontakt@nordrvask.no",
     "telephone": "+47 906 60 041",
     "slogan": "Grundig. Pålitelig. Profesjonelt.",
     "makesOffer": [
@@ -41,17 +41,26 @@
 
 <header class="topbar" id="topp">
   <div class="wrap">
-    <a class="brand" href="#topp" aria-label="NordR Vask – til toppen">N<span class="sc">ORD</span>R <small>VASK</small></a>
-    <nav aria-label="Hovedmeny">
+    <nav id="meny" aria-label="Hovedmeny">
       <ul>
         <li><a href="#topp" aria-current="page">Hjem</a></li>
         <li><a href="#tjenester">Tjenester</a></li>
-        <li><a href="#slik">Slik jobber vi</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary" href="#kontakt">Ta kontakt</a>
-    <button class="menu-btn" id="menyknapp" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="topp">
+    <div class="spraak">
+      <button class="pill" id="spraakknapp" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Språk: norsk">
+        <svg class="flagg" viewBox="0 0 22 16" aria-hidden="true"><rect width="22" height="16" fill="#BA0C2F"/><rect x="6" width="4" height="16" fill="#fff"/><rect y="6" width="22" height="4" fill="#fff"/><rect x="7" width="2" height="16" fill="#00205B"/><rect y="7" width="22" height="2" fill="#00205B"/></svg>
+        <span>NO</span>
+        <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="spraak-meny" id="spraakmeny" hidden>
+        <li><span aria-current="true">Norsk</span></li>
+        <li><span class="kommer">English – kommer</span></li>
+      </ul>
+    </div>
+    <a class="btn btn-primary top-cta" href="#kontakt">Ta kontakt</a>
+    <button class="menu-btn" id="menyknapp" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="meny">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -59,20 +68,25 @@
 
 <main>
   <section class="hero" id="hjem" aria-label="Velkommen">
-    <div class="hero-bg" role="img" aria-label="Stille hav med små skjær i lyst nordlys"></div>
+    <div class="hero-bg" role="img" aria-label="Stille hav med små skjær under lys himmel"></div>
     <div class="inner">
-      <svg class="logo" viewBox="0 0 320 210" role="img" aria-label="NordR Vask">
-  <path d="M46 92 C 100 18, 220 18, 274 92" fill="none" stroke="#4C2B18" stroke-width="7" stroke-linecap="round"/>
-  <path d="M60 86 C 108 30, 214 30, 262 86" fill="none" stroke="#4C2B18" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
-  <text x="160" y="130" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="600" fill="#4C2B18" letter-spacing="1"><tspan font-size="72">N</tspan><tspan font-size="50">ORD</tspan><tspan font-size="72">R</tspan></text>
-  <line x1="62" y1="152" x2="120" y2="152" stroke="#0B83D3" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="160" y="159" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="21" fill="#0B83D3" letter-spacing="7">VASK</text>
-  <line x1="200" y1="152" x2="258" y2="152" stroke="#0B83D3" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M112 186 C 140 166, 170 194, 200 178 C 216 170, 228 168, 240 172 C 224 180, 212 190, 196 196 C 168 206, 138 200, 112 186 Z" fill="#0B83D3"/>
-  <path d="M120 190 C 150 176, 178 198, 206 184" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-  <circle cx="240" cy="160" r="4" fill="#0B83D3"/>
-  <circle cx="252" cy="170" r="3" fill="#0B83D3"/>
-</svg>
+      <svg class="logo" viewBox="0 0 320 214" role="img" aria-label="NordR Vask">
+        <path d="M38 104 C 84 26, 236 26, 282 104 C 232 44, 88 44, 38 104 Z" fill="#4C2B18"/>
+        <path d="M50 100 C 96 38, 224 38, 270 100" fill="none" stroke="#4C2B18" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+        <path d="M44 106 C 70 70, 110 46, 160 40" fill="none" stroke="#4C2B18" stroke-width="1" stroke-linecap="round" opacity=".35"/>
+        <text x="160" y="140" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-weight="700" fill="#4C2B18" letter-spacing="1"><tspan font-size="74">N</tspan><tspan font-size="52">ORD</tspan><tspan font-size="74">R</tspan></text>
+        <line x1="58" y1="163" x2="116" y2="163" stroke="#0B83D3" stroke-width="2" stroke-linecap="round"/>
+        <text x="160" y="170" text-anchor="middle" font-family="Nunito, Inter, sans-serif" font-weight="700" font-size="21" fill="#0B83D3" letter-spacing="8">VASK</text>
+        <line x1="204" y1="163" x2="262" y2="163" stroke="#0B83D3" stroke-width="2" stroke-linecap="round"/>
+        <g fill="none" stroke="#0B83D3" stroke-linecap="round">
+          <path d="M104 196 C 136 172, 170 208, 226 182" stroke-width="7"/>
+          <path d="M112 205 C 148 186, 178 214, 232 190" stroke-width="4.5" opacity=".85"/>
+          <path d="M126 211 C 156 200, 184 220, 226 200" stroke-width="2.5" opacity=".7"/>
+        </g>
+        <circle cx="240" cy="167" r="4.2" fill="#0B83D3"/>
+        <circle cx="251" cy="177" r="3" fill="#0B83D3"/>
+        <circle cx="236" cy="180" r="2" fill="#0B83D3"/>
+      </svg>
       <p class="tagline">Grundig. Pålitelig. Profesjonelt.</p>
       <div class="cta">
         <a class="btn btn-primary" href="#kontakt">Ta kontakt</a>
@@ -83,43 +97,34 @@
 
   <section class="tjenester" id="tjenester">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>Våre tjenester</h2>
-        <p>Vi vasker der det skal bli rent – og der det skal vises fram. Hver jobb avtales på forhånd, så du vet hva som er gjort når vi går.</p>
-      </div>
-      <div class="grid">
-        <article class="card reveal">
+      <h2 class="tittel">Våre tjenester</h2>
+      <ul class="tjeneste-liste">
+        <li>
           <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h10v9H3zM13 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
-          <h3>Flyttevask</h3>
-          <p>Klart til overlevering, med alle flater, vinduer og hvitevarer tatt.</p>
-        </article>
-        <article class="card reveal">
+          <span>Flyttevask</span>
+        </li>
+        <li>
           <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="4"/><path d="M11 12l9 9M17 18l2-2M14 15l2-2"/></svg></div>
-          <h3>Utleievask</h3>
-          <p>Mellom leietakere, slik at boligen kan vises og leies ut igjen raskt.</p>
-        </article>
-        <article class="card reveal">
+          <span>Utleievask</span>
+        </li>
+        <li>
           <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></svg></div>
-          <h3>Private hjem</h3>
-          <p>Fast eller ved behov. Samme person kommer, så langt det lar seg gjøre.</p>
-        </article>
-        <article class="card reveal">
+          <span>Vask for private&nbsp;hjem</span>
+        </li>
+        <li>
           <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V4h14v17"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M9 16h2M13 16h2"/><path d="M3 21h18"/></svg></div>
-          <h3>Bedrifter</h3>
-          <p>Kontor, butikk og fellesarealer – utenom åpningstid om dere ønsker det.</p>
-        </article>
-        <article class="card reveal">
+          <span>Vask for bedrifter</span>
+        </li>
+        <li>
           <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l8-7 8 7"/><path d="M5 10v10h7"/><circle cx="16.5" cy="16.5" r="3.5"/><path d="M19 19l3 3"/></svg></div>
-          <h3>Visningsvask</h3>
-          <p>Ekstra vekt på det som synes: glass, speil, kjøkken og bad før visning.</p>
-        </article>
-        <article class="card reveal">
-          <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/><path d="M6 3v4M18 3v4"/></svg></div>
-          <h3>Hytte og fritidsbolig</h3>
-          <p>Åpning om våren, stenging om høsten, eller før gjester og utleie.</p>
-        </article>
-      </div>
-      <div class="pris reveal">
+          <span>Visningsvask</span>
+        </li>
+        <li>
+          <div class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l7-7 7 7"/><path d="M7 11v9h10v-9"/><path d="M10 20v-5h4v5"/><path d="M3 20l1.5-3 1.5 3M18 20l1.5-3 1.5 3"/></svg></div>
+          <span>Hytte- og fritidsboligvask</span>
+        </li>
+      </ul>
+      <div class="pris">
         <a class="btn btn-outline" href="#kontakt">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>
           Pris etter avtale
@@ -128,109 +133,50 @@
     </div>
   </section>
 
-  <section class="slik" id="slik">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>Slik jobber vi</h2>
-        <p>Tre ord i logoen, tre løfter i praksis.</p>
-      </div>
-      <div class="verdier">
-        <div class="verdi reveal">
-          <span class="num" aria-hidden="true">I</span>
-          <h3>Grundig</h3>
-          <p>Vi går gjennom boligen etter en fast sjekkliste og leverer den samme listen til deg, med det som er gjort krysset av.</p>
-        </div>
-        <div class="verdi reveal">
-          <span class="num" aria-hidden="true">II</span>
-          <h3>Pålitelig</h3>
-          <p>Avtalt tid holdes. Får vi et avvik på veien, ringer vi før vi er sene – ikke etterpå.</p>
-        </div>
-        <div class="verdi reveal">
-          <span class="num" aria-hidden="true">III</span>
-          <h3>Profesjonelt</h3>
-          <p>Egnede midler til hver flate, forsikret arbeid og ryddige avtaler. Ingen overraskelser på fakturaen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <hr class="skille">
 
   <section class="kontakt" id="kontakt">
-    <svg class="bolge" viewBox="0 0 340 160" aria-hidden="true"><path d="M0 80 C 60 30, 120 130, 180 80 S 300 30, 340 80" fill="none" stroke="#0B83D3" stroke-width="10" stroke-linecap="round" opacity=".25"/><path d="M0 110 C 60 60, 120 160, 180 110 S 300 60, 340 110" fill="none" stroke="#0B83D3" stroke-width="6" stroke-linecap="round" opacity=".18"/></svg>
+    <svg class="bolge" viewBox="0 0 220 260" aria-hidden="true">
+      <g fill="none" stroke="#0B83D3" stroke-linecap="round">
+        <path d="M-20 60 C 40 20, 60 120, 120 80 S 220 40, 240 70" stroke-width="14" opacity=".12"/>
+        <path d="M-20 110 C 40 70, 60 170, 120 130 S 220 90, 240 120" stroke-width="10" opacity=".10"/>
+        <path d="M-20 160 C 40 120, 60 220, 120 180 S 220 140, 240 170" stroke-width="6" opacity=".09"/>
+      </g>
+    </svg>
     <div class="wrap">
-      <div class="kontakt-tekst reveal">
-        <h2>Ta kontakt</h2>
-        <p>Har du spørsmål eller ønsker et tilbud? Fortell kort hva det gjelder, så tar vi kontakt – som regel samme dag.</p>
-        <div class="kontakt-info">
-          <a href="mailto:s-ruw@hotmail.no">s-ruw@hotmail.no</a>
-          <a href="tel:+4790660041">+47 906 60 041</a>
-        </div>
-        <p class="hint">Vi bruker opplysningene bare til å svare på henvendelsen din. Skjemaet formidles av Web3Forms og lagres ikke hos dem utover selve videresendingen.</p>
+      <div class="kontakt-tekst">
+        <h2 class="tittel">Ta kontakt</h2>
+        <p>Har du spørsmål eller ønsker et tilbud? <br>Fyll ut informasjonen, så kontakter vi deg.</p>
+        <button class="btn btn-primary" type="submit" form="kontaktskjema" id="send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          Send e-post
+        </button>
+        <p class="hint">E-posten din åpnes automatisk, <br>slik at du kan sende oss en melding.</p>
+        <p class="hint hint-etter" id="send-hint" hidden>Fikk du ikke opp e-postprogrammet? Send meldingen til <a href="mailto:kontakt@nordrvask.no">kontakt@nordrvask.no</a> eller ring <a href="tel:+4790660041">906 60 041</a>.</p>
       </div>
 
-      <!-- Skjemaet sendes via Web3Forms når data-key er satt. Uten nøkkel åpnes e-postprogrammet (mailto). -->
-      <form id="kontaktskjema" class="reveal" action="https://api.web3forms.com/submit" method="post" data-key="bd1b44f8-73b7-4f2d-a324-9ab97e1399d8" novalidate>
-        <input type="hidden" name="access_key" value="bd1b44f8-73b7-4f2d-a324-9ab97e1399d8">
-        <input type="hidden" name="subject" value="Henvendelse fra nettsiden">
-        <input type="hidden" name="from_name" value="NordR Vask – nettside">
-        <input type="hidden" name="redirect" value="https://nordrvask.no/takk.html">
-        <div class="felt-rad">
-          <label for="navn">Navn
-            <input type="text" id="navn" name="name" autocomplete="name" required maxlength="120">
-          </label>
-          <label for="telefon">Telefon
-            <input type="tel" id="telefon" name="Telefon" autocomplete="tel" inputmode="tel" maxlength="30">
-          </label>
-        </div>
-        <div class="felt-rad">
-          <label for="epost">E-post
-            <input type="email" id="epost" name="email" autocomplete="email" required maxlength="160">
-          </label>
-          <label for="kategori">Hva gjelder henvendelsen?
-            <select id="kategori" name="Gjelder" required>
-              <option value="" selected disabled>Velg kategori</option>
-              <option>Flyttevask</option>
-              <option>Utleievask</option>
-              <option>Vask for private hjem</option>
-              <option>Vask for bedrifter</option>
-              <option>Visningsvask</option>
-              <option>Hytte- og fritidsboligvask</option>
-              <option>Annet</option>
-            </select>
-          </label>
-        </div>
-        <label for="melding">Melding
-          <textarea id="melding" name="message" placeholder="Skriv din melding her – gjerne adresse, størrelse og ønsket dato." required maxlength="4000"></textarea>
+      <form id="kontaktskjema" class="skjema" novalidate>
+        <label for="kategori">Hva gjelder henvendelsen?
+          <select id="kategori" name="kategori" required>
+            <option value="" selected disabled>Velg kategori</option>
+            <option>Flyttevask</option>
+            <option>Utleievask</option>
+            <option>Vask for private hjem</option>
+            <option>Vask for bedrifter</option>
+            <option>Visningsvask</option>
+            <option>Hytte- og fritidsboligvask</option>
+            <option>Annet</option>
+          </select>
         </label>
-        <label class="check" for="ring">
-          <input type="checkbox" id="ring" name="Ring meg" value="Ja">
-          <span>Ring meg gjerne i stedet for å svare på e-post.</span>
+        <label for="melding" class="sr-label">Melding
+          <textarea id="melding" name="melding" placeholder="Skriv din melding her..." required maxlength="4000"></textarea>
         </label>
-
-        <!-- Spamfelle: skjult for mennesker, fylles bare av roboter -->
-        <div class="hp" aria-hidden="true">
-          <label for="botcheck">Ikke fyll ut<input type="checkbox" id="botcheck" name="botcheck" tabindex="-1"></label>
-        </div>
-
         <p class="feil" id="skjema-feil" role="alert" hidden></p>
-
-        <div class="form-foot">
-          <button class="btn btn-primary" type="submit" id="send">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span>Send henvendelse</span>
-          </button>
-          <span class="hint" id="send-hint">Vi svarer som regel samme dag.</span>
-        </div>
+        <p class="info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          Du sendes direkte til e-post for å sende meldingen.
+        </p>
       </form>
-
-      <div class="takk" id="takk" hidden tabindex="-1">
-        <div class="takk-ikon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-        </div>
-        <h3>Takk, <span id="takk-navn">vi har mottatt henvendelsen</span>!</h3>
-        <p id="takk-tekst">Vi har mottatt henvendelsen din og svarer som regel samme dag.</p>
-        <p class="hint">Vi svarer til <span id="takk-epost"></span>.</p>
-        <button class="btn btn-outline" type="button" id="ny-henvendelse">Send en ny henvendelse</button>
-      </div>
     </div>
   </section>
 </main>
@@ -238,11 +184,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 NordR Vask</span>
-    <ul>
-      <li><a href="#tjenester">Tjenester</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="#topp">Til toppen</a></li>
-    </ul>
+    <span><a href="mailto:kontakt@nordrvask.no">kontakt@nordrvask.no</a> · <a href="tel:+4790660041">+47 906 60 041</a></span>
   </div>
 </footer>
 
