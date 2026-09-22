@@ -59,7 +59,7 @@ img{max-width:100%;height:auto}
 .hero-bg{position:absolute;inset:0;z-index:-2;background-image:url("../img/hero-ocean.webp");background-size:cover;background-position:center 42%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(250,250,250,.55) 0%,rgba(250,250,250,.15) 40%,rgba(250,250,250,0) 65%)}
 .hero .inner{padding:0 var(--gutter) 52px;display:grid;justify-items:center;gap:18px}
-.logo{width:240px;max-width:100%;height:auto;display:block}
+.logo{width:260px;max-width:100%;height:auto;display:block}
 .tagline{font-weight:700;font-size:22px;color:var(--brun);letter-spacing:.01em;text-shadow:0 1px 6px rgba(255,255,255,.8)}
 .hero .cta{display:none}
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
@@ -125,7 +125,7 @@ footer a:hover{color:var(--brun)}
   .hero-bg{background-position:center 78%}
   .hero::before{background:linear-gradient(180deg,rgba(250,250,250,.85) 0%,rgba(250,250,250,.75) 45%,rgba(250,250,250,.25) 75%,rgba(250,250,250,0) 100%)}
   .hero .inner{padding:8px var(--gutter) 40px;gap:16px}
-  .logo{width:180px}
+  .logo{width:190px}
   .tagline{font-size:17px}
   .hero .cta{display:grid;gap:12px;justify-items:center;margin-top:6px}
   .hero .cta .btn{height:44px;min-width:186px;padding:0 26px}
